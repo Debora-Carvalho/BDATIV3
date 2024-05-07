@@ -1,3 +1,4 @@
+/*criando a tabela*/
 CREATE DATABASE ATIV3;  
 
 USE ATIV3;  
