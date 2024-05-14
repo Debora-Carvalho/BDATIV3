@@ -5968,3 +5968,12 @@ INSERT INTO PEOPLE (PEO_STR_NOME, PEO_STR_CPF, CIT_INT_ID) VALUES
 ('Camila Antunes',	'28076775337',	'3052'),
 ('Carlos Monteiro',	'42225760420',	'4507');
 
+/*para apresentar as tabelas*/
+
+SELECT * FROM REGION; 
+
+SELECT * FROM STATE; 
+
+SELECT * FROM CITY; 
+
+SELECT * FROM PEOPLE;
