@@ -1,4 +1,3 @@
-/*criando a tabela*/
 CREATE DATABASE ATIV3;  
 
 USE ATIV3;  
@@ -33,7 +32,8 @@ CREATE TABLE CITY(
 	CONSTRAINT  FK_CITY_STATE_ID FOREIGN KEY(STA_INT_ID) REFERENCES STATE(STA_INT_ID)
 ); 
 
-CREATE TABLE PEOPLE ( 
+CREATE TABLE PEOPLE 
+( 
     PEO_INT_ID INT NOT NULL IDENTITY(1,1), 
     CIT_INT_ID INT NOT NULL, 
     PEO_STR_NOME VARCHAR(70) NOT NULL,  
@@ -51,9 +51,6 @@ INSERT INTO REGION (REG_STR_DESC) VALUES ('Centro-oeste');
 INSERT INTO REGION (REG_STR_DESC) VALUES ('Nordeste');
 INSERT INTO REGION (REG_STR_DESC) VALUES ('Norte');
 
-/* o asteristico depois de SELECT representa todas as colunas*/
-SELECT * FROM REGION;
-
 /*inserindo os estados com suas respectivas siglas*/
 INSERT INTO STATE (STA_STR_DESC, STA_STR_SIGLA, REG_INT_ID) VALUES ('São Paulo','SP',1);
 INSERT INTO STATE (STA_STR_DESC, STA_STR_SIGLA, REG_INT_ID) VALUES ('Paraná','PR',2);
@@ -61,13 +58,3 @@ INSERT INTO STATE (STA_STR_DESC, STA_STR_SIGLA, REG_INT_ID) VALUES ('Goiás','GO
 INSERT INTO STATE (STA_STR_DESC, STA_STR_SIGLA, REG_INT_ID) VALUES ('Sergipe','SE',4);
 INSERT INTO STATE (STA_STR_DESC, STA_STR_SIGLA, REG_INT_ID) VALUES ('Acre','AC',5);
 
-/*para exibir as tabelas REGION e STATE*/
-SELECT * FROM REGION;
-SELECT * FROM STATE;
-
-/*para alterar apenas uma célula, usar UPDATE*/
-UPDATE REGION
-SET REG_STR_DESC = 'Centro-Oeste'
-WHERE REG_INT_ID = 3;
-
-/*Para a próxima aula: Inserir todas as regiões, todos os estados e todas as cidades, pesquisar no IBGE. Inserir 300 pessoas com nomes aleatórios distribuídas entre as cidades*/
