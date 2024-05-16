@@ -1,0 +1,2 @@
+INSERT INTO CITY (CIT_STR_DESC, STA_INT_ID) VALUES
+('Acrelândia',	1),
