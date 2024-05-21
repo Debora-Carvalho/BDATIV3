@@ -78,5 +78,9 @@ INNER JOIN CITY AS C ON S.STA_INT_ID = C.STA_INT_ID
 WHERE R.REG_INT_ID = 2 
 OR S.STA_STR_SIGLA = 'SP';    
 
+/*atualizando dados*/
+UPDATE CITY
+SET CIT_STR_DESC = 'Adamantina Fatec'    /*dado reescrito*/
+WHERE CIT_STR_DESC = 'Adamantina'        /*dado que será substituído*/
 
 
